@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FileShareFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Link wiil expire in 24 Hours"
+            android:textSize="25sp"
+            app:layout_anchor="@+id/constraintLayout"
+            app:layout_anchorGravity="top|center"
+            app:layout_constraintBottom_toTopOf="@+id/file_url_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animationView"
+            app:layout_constraintVertical_bias="0.744" />
+
+        <LinearLayout
+            android:id="@+id/file_url_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66">
+
+
+            <TextView
+                android:id="@+id/file_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:maxLines="1"
+                android:padding="8dp" />
+
+            <ImageButton
+                android:id="@+id/copy_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:backgroundTint="#fff"
+                android:src="@drawable/ic_copy" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/download_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#ff2e63"
+            android:text="Download"
+            app:layout_constraintEnd_toEndOf="@+id/file_url_layout"
+            app:layout_constraintHorizontal_bias="0.916"
+            app:layout_constraintStart_toStartOf="@+id/file_url_layout"
+            app:layout_constraintTop_toBottomOf="@+id/file_url_layout" />
+
+
+        <Button
+            android:id="@+id/share_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#ea5455"
+            android:text="Share"
+            app:layout_constraintEnd_toStartOf="@+id/download_file"
+            app:layout_constraintHorizontal_bias="0.893"
+            app:layout_constraintStart_toStartOf="@+id/file_url_layout"
+            app:layout_constraintTop_toBottomOf="@+id/file_url_layout" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            app:layout_constraintBottom_toTopOf="@+id/file_url_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.073"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/share_files" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/about_me_sheet"
+        android:id="@+id/about_me_sheet"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

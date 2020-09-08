@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="githubUrl">https://github.com/Joydip1997</string>
+    <string name="googlePlayStore">https://play.google.com/store/apps/developer?id=Joydip+Bose</string>
+    <string name="linkdean">https://www.linkedin.com/in/joydipbose1000</string>
+    <string name="website">http://androdude.com/</string>
+</resources>
